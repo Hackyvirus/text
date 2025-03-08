@@ -99,7 +99,7 @@ nav div {
   cursor: pointer;
   align-content: center;
   text-align: center;
-  width: 150px;
+  width: 130px;
 }
 
 #main-section {
@@ -390,12 +390,10 @@ input:focus {
   width: 100%;
   font-weight: 400;
   font-size: 14px;
+  word-wrap: break-word;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.87);
 }
-/* #cap-que-good-next {
-  margin: 20px 0;
-} */
 
 .second-title {
   font-family: "Open Sans";
@@ -409,7 +407,7 @@ input:focus {
   font-family: "Open Sans";
   font-weight: 600;
   font-size: 18px;
-  line-height: 15px;
+  line-height: 24px;
   color: rgba(0, 0, 0, 0.87);
   margin: 15px 0;
 }
@@ -1052,6 +1050,10 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
+  /* word-wrap: break-word; */
+  padding: 20px;
+  box-sizing: border-box;
 }
 #tab2,
 #tab3,
@@ -1111,10 +1113,13 @@ textarea:focus {
 #questionSet4five,
 #questionSet4six,
 #questionSet4seven,
-#questionSet4eight
- {
+#questionSet4eight {
   display: none;
   flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border-top: 0;
 }
 .input-grid {
   gap: 20px;
@@ -1133,6 +1138,7 @@ textarea:focus {
   }
   .nav-item {
     width: 100%;
+    height: 48px;
   }
   .gross-indi-box {
     align-items: start;
@@ -1149,9 +1155,9 @@ textarea:focus {
     padding: 0;
   }
   nav {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    height: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    height: max-content;
   }
   #main-section {
     flex-direction: column;
@@ -1163,12 +1169,56 @@ textarea:focus {
   .manual {
     width: max-content;
   }
+  /* #questionSetOne,
+  #questionSetTwo,
+  #questionSetThree,
+  #questionSetFour,
+  #questionSetFive,
+  #questionSetSix,
+  #questionSetSeven,
+  #questionSetEight,
+  #questionSet2one,
+  #questionSet2two,
+  #questionSet2three,
+  #questionSet2four,
+  #questionSet2five,
+  #questionSet2six,
+  #questionSet2seven,
+  #questionSet2eight,
+  #questionSet3one,
+  #questionSet3two,
+  #questionSet3three,
+  #questionSet3four,
+  #questionSet3five,
+  #questionSet3six,
+  #questionSet3seven,
+  #questionSet3eight,
+  #questionSet4one,
+  #questionSet4two,
+  #questionSet4three,
+  #questionSet4four,
+  #questionSet4five,
+  #questionSet4six,
+  #questionSet4seven,
+  #questionSet4eight {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-top: 0;
+  } */
+  .input-title2 {
+    width: 100%;
+    line-height: 24px;
+}
 }
 @media (max-width: 480px) {
   header {
     height: 90px;
     width: 100%;
     margin-bottom: 10px;
+  }
+  #basic-information-box {
+    padding-top: 0;
   }
   .input-title {
     width: 85%;
@@ -1181,8 +1231,12 @@ textarea:focus {
     line-height: 38px;
     font-size: 24px;
   }
+
   nav {
+    grid-template-columns: repeat(2, 1fr);
     margin-bottom: 20px;
+    gap: 8px;
+    height: max-content;
   }
   header h2 {
     font-size: 20px;
@@ -1201,9 +1255,8 @@ textarea:focus {
   #cap-good-que,
   #imported-raw-goods {
     align-items: center;
-    margin: auto;
     text-align: start;
-    line-height: 22px;
+    line-height: normal;
     font-size: 16px;
   }
   .input-grid2 {
@@ -1214,7 +1267,10 @@ textarea:focus {
     line-height: 24px;
   }
   .input-title {
+    width: 100%;
     display: inline-block;
+    font-weight: 500;
+    text-align: start;
   }
   .input-box,
   .input-box2 {
@@ -1237,5 +1293,11 @@ textarea:focus {
   }
   .preview-container {
     max-height: 500px;
+  }
+  #tab2,
+  #tab3,
+  #tab4,
+  #tab5 {
+    padding: 0;
   }
 }
