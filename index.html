@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ethanol Calculator</title>
+    <title>Decision Matrix</title>
 
     <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
 
@@ -14,6 +14,17 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+      }
+      .title-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Open Sans";
+        font-weight: 400;
+        text-align: center;
+        line-height: 43px;
+        /* font-size: 32px; */
       }
 
       /* Default Styles (Desktop) */
@@ -675,7 +686,13 @@
       <div class="logo-div">
         <img id="logo" src="logo.png" alt="logo" />
       </div>
-      <h1 id="title">Ethanol Calculator</h1>
+      <div class="title-box">
+        <h1 id="title">Decision Matrix</h1>
+        <p class="">
+          To determine profitability on supply of rectified spirit to Liquor
+          manufacturers
+        </p>
+      </div>
       <div class="book-div">
         <p id="book-title"><i>Brought to you by the authors of</i></p>
         <img id="book" src="books.png" alt="books" />
@@ -814,10 +831,6 @@
         Why Decision matrix to be used for sale of ENA to liquor manufacturers:
       </h2>
       <section>
-        <p class="main-para">
-          To determine profitability on supply of rectified spirit to Liquor
-          manufacturers as explained below:
-        </p>
         <p>
           An amendment is made to the levy Section 9 of the Central Goods and
           Services Tax Act, 2017 (‘the CGST Act’). In terms of the said
@@ -885,14 +898,14 @@
         <p>
           This decision matrix requires the User to provide few details such as
           amount of sales (taxable sales, exempt sales, total ITC, common credit
-          of inputs, inputs services, capital goods) for the period from 1 April
-          2024 till the date when decision matrix is used and also the forecast/
-          projections for the remaining part of FY 2024-25. Once the amounts are
-          fed, all the user needs to do is to click the ‘calculate’ button to
-          generate the output values for the amount of profit or loss that the
-          User will incur on proposed sale of such goods.
+          of inputs, inputs services, capital goods) for the respective
+          applicable period of one financial year or part of the year as the
+          case may be. Once it is filled, all the user needs to do is to click
+          the ‘calculate’ button to generate the output values for the amount of
+          profit or loss that the User will incur on proposed sale or
+          discontinuance of sale of RS
         </p>
-        <p><strong>Ethanol Calculator is absolutely free</strong></p>
+        <p><strong>Decision Matrix is absolutely free</strong></p>
 
         <!-- Pop-up Box -->
         <div id="popup-box" class="popup-box">
@@ -912,15 +925,14 @@
           </div>
         </div>
 
-        <button id="calculate-btn" class="calculate">Calculate</button>
+        <button id="calculate-btn" class="calculate">Next</button>
       </section>
     </main>
     <!-- footer  -->
     <footer>
       <p>
-        Optitax's’s evaluator broadly analyses the data points and provides
-        comparison of benefits under various schemes which will enable the user
-        to take a considered decision
+        Optitax’s decision matrix broadly analyses the information and provides
+        inputs for the decision maker
       </p>
     </footer>
     <script
@@ -936,7 +948,7 @@
 
       $("#acceptBtn").on("click", function () {
         if ($("#checkbox").is(":checked")) {
-          window.location.href = "https://hackyvirus.github.io/text/calculator.html";
+          window.location.href = "/calculator.html";
         } else {
           alert("Please accept the terms and conditions");
         }
