@@ -1124,6 +1124,9 @@ textarea:focus {
 .input-grid {
   gap: 20px;
 }
+#notWord{
+  display: inline-lock;
+}
 @media (max-width: 768px) {
   #title {
     text-align: center;
@@ -1300,4 +1303,5 @@ textarea:focus {
   #tab5 {
     padding: 0;
   }
+
 }
